@@ -27,14 +27,14 @@ void setup() {
 
 void loop() {
   digitalWrite(yellowLED, HIGH);
-  delay(10000);
+  delay(3000);
   LEDBling(yellowLED);
   digitalWrite(yellowLED, LOW);
 
 
   digitalWrite(greenLED, HIGH);
   
-  for (int i = 0; i < 1000; i++) {
+  for (int i = 0; i < 300; i++) {
     if (digitalRead(pirSensor) == HIGH) {
       digitalWrite(gateLED, HIGH);
     } else {
@@ -44,12 +44,13 @@ void loop() {
     delay(10);
   }
 
+  digitalWrite(gateLED, LOW);
   LEDBling(greenLED);
   digitalWrite(greenLED, LOW);
 
 
   digitalWrite(redLED, HIGH);
-  delay(10000);
+  delay(3000);
   LEDBling(redLED);
   digitalWrite(redLED, LOW);
 }
